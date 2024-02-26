@@ -22,7 +22,10 @@ var _ = require('underbar');
  */
 
 var maleCount = function(array) {
-
+    var males = _.filter(array, function(item){
+        return item.gender === 'male';
+    })
+    return males.length;
 };
 
 var femaleCount;
