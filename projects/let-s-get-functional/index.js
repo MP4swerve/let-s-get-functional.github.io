@@ -36,17 +36,26 @@ var femaleCount = function (array){
 };
 
 var oldestCustomer = function(array){
-    var oldest = _.reduce(array, function(old, customer){
-        if(!old || old.age > customer.age){
-            return customer
-    } else {
-        return old;
+    var oldest = _.reduce(array, function(acc, current){
+        if(acc.age > current.age){
+            return acc;
+        } else {
+            return current;
         }
-    }, null);
+    });
     return oldest.name;
 };
 
-var youngestCustomer;
+var youngestCustomer = function(array){
+    var young = _.reduce(array, function(acc, current){
+        if(acc.age < current.age){
+            return current;
+        } else{
+            return acc;
+        }
+    })
+    return young.name;
+};
 
 var averageBalance;
 
