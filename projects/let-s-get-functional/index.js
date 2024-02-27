@@ -49,11 +49,11 @@ var oldestCustomer = function(array){
 var youngestCustomer = function(array){
     var young = _.reduce(array, function(acc, current){
         if(acc.age < current.age){
-            return current;
-        } else{
             return acc;
+        } else {
+            return current;
         }
-    })
+    });
     return young.name;
 };
 
