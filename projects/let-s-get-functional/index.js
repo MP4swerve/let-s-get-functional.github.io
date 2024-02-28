@@ -72,7 +72,7 @@ var firstLetterCount = function(array){
             return firstLetter;
         }
     })
-    return firstLetter.length;
+    return letter.length;
 };
 
 var friendFirstLetterCount;
