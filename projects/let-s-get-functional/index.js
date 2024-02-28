@@ -59,7 +59,8 @@ var youngestCustomer = function(array){
 
 var averageBalance = function(array){
     var sum = _.reduce(array, function(acc, current){
-        return acc + current.balance;
+        var balance = parseFloat(current.balance[\$,\g, ''])
+        return acc + balance;
     }, 0);
     var avg = sum / array.length;
     return avg;
