@@ -74,10 +74,10 @@ var firstLetterCount = function(array, letter){
     return friend.length;
 };
 
-var friendFirstLetterCount = function(array){
+var friendFirstLetterCount = function(array, customer, letter){
     var friendName = _.filter(array, function(customer){
         var firstLetterName = customer.friends.name[0].toLowerCase();
-        return firstLetterName === 'b'
+        return firstLetterName === letter.toLowerCase()
     })
     return friendName.length;
 };
