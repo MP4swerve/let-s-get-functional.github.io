@@ -66,12 +66,12 @@ var averageBalance = function(array){
     return avg;
 };
 
-var firstLetterCount = function(array){
-    var letter = _.filter(array, function(customer){
+var firstLetterCount = function(array, letter){
+    var friend = _.filter(array, function(customer){
         var firstLetter = customer.name[0].toLowerCase();
-        return firstLetter === 'b' 
+        return firstLetter === letter
     });
-    return letter.length;
+    return friend.length;
 };
 
 var friendFirstLetterCount = function(array){
