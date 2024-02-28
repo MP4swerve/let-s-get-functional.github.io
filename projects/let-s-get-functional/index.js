@@ -65,7 +65,15 @@ var averageBalance = function(array){
     return avg;
 };
 
-var firstLetterCount;
+var firstLetterCount = function(array){
+    var letter = _.filter(array, function(customer){
+        var firstLetter = customer.name;
+        if(firstLetter[0].toUpperCase() || firstLetter[0].toLowerCase() === 'b' || "B"){
+            return firstLetter;
+        }
+    })
+    return firstLetter.length;
+};
 
 var friendFirstLetterCount;
 
