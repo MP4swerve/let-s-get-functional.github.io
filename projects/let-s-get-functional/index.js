@@ -87,9 +87,10 @@ var friendsCount = function(array, name){
         var friendName = customer.friends;
         for(var i = 0; i < friendName.length; i++){
             if(friendName[i] === name){
-                return friendName[i];
+                return true;
             }
         }
+        return false;
     });
     return customerName;
 };
