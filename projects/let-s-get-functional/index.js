@@ -82,7 +82,17 @@ var friendFirstLetterCount = function(array, customer, letter){
     return friendName.length;
 };
 
-var friendsCount;
+var friendsCount = function(array, name){
+    var customerName = _.filter(array, function(customer){
+        var friendName = customer.name;
+        for(var i = 0; i < friendName.length; i++){
+            if(friendName[i] === name){
+                return friendName[i];
+            }
+        }
+    });
+    return customerName;
+};
 
 var topThreeTags;
 
