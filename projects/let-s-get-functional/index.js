@@ -80,8 +80,9 @@ var friendFirstLetterCount = function(array, customer, letter){
         var firstLetterName = customer.friends[0].name[0].toLowerCase();
         if(firstLetterName === letter.toLowerCase()){
             return true;
+            }
         }
-        }
+        return false;
     })
     return friendName.length;
 };
