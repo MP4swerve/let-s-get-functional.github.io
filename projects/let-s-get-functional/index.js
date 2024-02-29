@@ -75,15 +75,16 @@ var firstLetterCount = function(array, letter){
 };
 
 var friendFirstLetterCount = function(array, customer, letter){
-    var friendName = _.filter(array, function(customer){
-        for(var i = 0; i < customer.friends.length; i++){
-            var firstLetterName = customer.friends[i].name[0].toLowerCase();
-            if(firstLetterName === letter.toLowerCase()){
-                return firstLetterName;
-            }   
+    var friendCount = _.filter(array, function(cust) {
+        for (var i = 0; i < cust.friends.length; i++) {
+            var firstLetterName = cust.friends[i].name[0].toLowerCase();
+            if (firstLetterName === letter.toLowerCase()) {
+                return true;
+            }
         }
-    })
-    return friendName.length;
+        return false;
+    });
+    return friendCount.length;
 };
 
 var friendsCount = function(array, name){
