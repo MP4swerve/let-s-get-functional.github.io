@@ -83,7 +83,7 @@ var friendFirstLetterCount = function(array, customer, letter){
 };
 
 var friendsCount = function(array, name){
-    var customerName = _.filter(array, function(customer){
+    var customerName = _.map(array, function(customer){
         var friendName = customer.friends;
         for(var i = 0; i < friendName.length; i++){
             if(friendName[i].name === name){
