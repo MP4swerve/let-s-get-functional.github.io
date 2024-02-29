@@ -78,11 +78,10 @@ var friendFirstLetterCount = function(array, customer, letter){
     var friendName = _.filter(array, function(customer){
         for(var i = 0; i < customer.friends.length; i++){
         var firstLetterName = customer.friends[0].name[0].toLowerCase();
-        if(firstLetterName === letter.toLowerCase()){
-            return true;
-            }
+        return firstLetterName === letter.toLowerCase();
+            
+            
         }
-        return false;
     })
     return friendName.length;
 };
