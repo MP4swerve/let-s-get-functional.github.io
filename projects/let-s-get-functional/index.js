@@ -95,7 +95,7 @@ var friendsCount = function(array, name){
             }
         }
     })
-    return counts;
+    // return counts;
 };
 
 var topThreeTags = function(array){
