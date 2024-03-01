@@ -119,6 +119,7 @@ var topThreeTags = function(array){
     })
     var output = []
     output.push(empty[0][0], empty[1][0], empty[2][0])
+    return output;
 };
 
 var genderCount = function(array){
