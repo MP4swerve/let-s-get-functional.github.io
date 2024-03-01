@@ -90,12 +90,12 @@ var friendFirstLetterCount = function(array, customer, letter){
 var friendsCount = function(array, name){
     var counts = _.filter(array, function(customer){
         for(var i = 0; i < customer.friends.length; i++){
-            if(customer.frineds[i].name === name){
+            if(customer.friends[i].name === name){
                 return true;
             }
         }
     })
-    // return counts;
+    return counts;
 };
 
 var topThreeTags = function(array){
