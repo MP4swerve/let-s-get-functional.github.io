@@ -124,10 +124,10 @@ var topThreeTags = function(array){
 
 var genderCount = function(array){
     var obj = _.reduce(array, function(acc, current){
-        if(acc[gender]){
-            acc += current.gender
+        if(acc[current.gender]){
+            acc[current.gender] += 1;
         } else{
-            acc.push(current.gender)
+            acc[current.gender] = 1;
         }
     }, {})
 };
