@@ -129,7 +129,8 @@ var genderCount = function(array){
         } else{
             acc[current.gender] = 1;
         }
-    }, {})
+    }, {});
+    return obj;
 };
 
 //////////////////////////////////////////////////////////////////////
