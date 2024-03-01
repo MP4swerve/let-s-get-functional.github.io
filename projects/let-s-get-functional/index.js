@@ -75,13 +75,14 @@ var firstLetterCount = function(array, letter){
 };
 
 var friendFirstLetterCount = function(array, customer, letter){
-    var friendName = _.filter(array, function(customer){
-        for(var i = 0; i < customer.friends.length; i++){
-            var firstLetterName = customer.friends[0].name[0].toLowerCase();
-            return firstLetterName === letter.toLowerCase();   
+    for(var i = 0; i < array.length; i++){
+        if(array[i].name === customer){
+            var friendName = _.filter(array[i].friends, function(cust){
+                var firstLet = cust.name[0].toLowerCase();
+                return firstLet === letter.toLowerCase();
+            })
         }
-    })
-    return friendName.length;
+    }
 };
 
 
