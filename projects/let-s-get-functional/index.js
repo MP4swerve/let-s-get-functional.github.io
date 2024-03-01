@@ -96,9 +96,40 @@ var friendsCount = function(array, name){
     }
 };
 
-var topThreeTags;
+var topThreeTags = function(array){
+    var topThree = _.reduce(array, function(acc, current){
+        for(var i = 0; i < current.tags.length; i++){
+            if(acc[current.tags[i]]){
+                acc[current.tags[i]] += 1;
+            } else{
+                acc[current.tags[i]] = 1;
+            }
+        }
+        return acc;
+    }, {})
+    var empty = [];
+    for(var key in topThree){
+        var sub = [];
+        sub.push(key);
+        sub.push(topThree[key])
+        empty.push(sub)
+    }
+    empty.sort(function(a, b){
+        return b[b.length - 1] - a[a.length - 1];
+    })
+    var output = []
+    output.push(empty[0][0], empty[1][0], empty[2][0])
+};
 
-var genderCount;
+var genderCount = function(array){
+    var obj = _.reduce(array, function(acc, current){
+        if(acc[gender]){
+            acc += current.gender
+        } else{
+            acc.push(current.gender)
+        }
+    }, {})
+};
 
 //////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE ////////////////////////////////////////////
