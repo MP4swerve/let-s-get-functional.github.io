@@ -91,7 +91,7 @@ var friendsCount = function(array, name){
     for(var i = 0; i < array.length; i++){
         var amount = _.reduce(array[i].friends, function(acc, current){
             if(array[i].friends[i].name === name){
-                acc.push(array[i].friends[i].name);
+                acc.push(current.name);
             }
         }, []);
         return amount;
