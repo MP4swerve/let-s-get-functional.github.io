@@ -89,7 +89,7 @@ var friendFirstLetterCount = function(array, customer, letter){
 
 var friendsCount = function(array, name){
     var counts = _.filter(array, function(customer){
-        for(var i = 0; i < customer.friends.length){
+        for(var i = 0; i < customer.friends.length; i++){
             if(customer.frineds[i].name === name){
                 return true;
             }
