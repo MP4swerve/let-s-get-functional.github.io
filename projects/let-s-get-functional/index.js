@@ -89,11 +89,11 @@ var friendFirstLetterCount = function(array, customer, letter){
 
 var friendsCount = function(array, name){
     for(var i = 0; i < array.length; i++){
-        var amount = _.reduce(array[i].friends, function(acc, current){
-            if(array[i].friends.name === name){
-                acc.push(current.name);
+        var amount = _.filter(array[i].friends, function(customer){
+            if(customer.name === name){
+                return customer.name;
             }
-        }, []);
+        })
         return amount;
     }
 };
