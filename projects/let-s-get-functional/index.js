@@ -88,14 +88,17 @@ var friendFirstLetterCount = function(array, customer, letter){
 
 
 var friendsCount = function(array, name){
-    var counts = _.map(array, function(customer){
-        for(var i = 0; i < customer.friends.length; i++){
-            if(customer.friends[i].name === name){
-                return customer.name
+    var counts = _.filter(array, function(customers){
+        for(var i = 0; i < customers.friends.length; i++){
+            if(customers.friends[i].name === name){
+                return true;
             }
         }
     });
-    return counts;
+    var customerName = counts.map(function(item){
+        return item.name;
+    })
+    return customerName;
 };
 
 var topThreeTags = function(array){
